@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WellthSpark</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>WellthSpark</h1>
+    <form id="healthForm">
+      <div class="form-group">
+        <label for="age">Age:</label>
+        <input type="number" id="age" name="age" required>
+      </div>
+
+      <div class="form-group">
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+          <option value="male">Male</option>
+          <option value="female">Female</option>
+          <option value="other">Other</option>
+        </select>
+      </div>
+
+      <div class="form-group">
+        <label for="steps">Daily Steps:</label>
+        <input type="number" id="steps" name="steps" required>
+      </div>
+
+      <div class="form-group">
+        <label for="calories">Calories Intake:</label>
+        <input type="number" id="calories" name="calories" required>
+      </div>
+
+      <div class="form-group">
+        <label for="sleep">Hours of Sleep:</label>
+        <input type="number" id="sleep" name="sleep" required>
+      </div>
+
+      <div class="form-group">
+        <label for="stressLevel">Stress Level (1-10):</label>
+        <input type="number" id="stressLevel" name="stressLevel" required min="1" max="10">
+      </div>
+
+      <button type="button" onclick="calculateRecommendations()">Get Recommendations</button>
+    </form>
+
+    <div id="recommendations"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
